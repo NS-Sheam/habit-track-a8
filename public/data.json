@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Morning Meditation",
+    "category": "Mindset",
+    "frequency": "7x/week",
+    "recommended": "Daily",
+    "description": "Start your day with 10 minutes of mindfulness meditation to reduce stress and improve focus.",
+    "image": "/morning-meditation.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Gratitude Journaling",
+    "category": "Mindset",
+    "frequency": "5x/week",
+    "recommended": "Morning",
+    "description": "Write down three things you're grateful for to cultivate a positive mindset.",
+    "image": "/gratitude-jurnaling.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Evening Walk",
+    "category": "Fitness",
+    "frequency": "6x/week",
+    "recommended": "Evening",
+    "description": "Take a 30-minute walk every evening to unwind and stay active.",
+    "image": "evening-walk.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Hydration Check-In",
+    "category": "Health",
+    "frequency": "3x/day",
+    "recommended": "Throughout the day",
+    "description": "Track your water intake to stay energized and healthy.",
+    "image": "/hydration.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Read 10 Pages",
+    "category": "Growth",
+    "frequency": "7x/week",
+    "recommended": "Anytime",
+    "description": "Feed your brain by reading 10 pages of a book daily.",
+    "image": "/pages.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Digital Detox",
+    "category": "Mindset",
+    "frequency": "1x/week",
+    "recommended": "Weekend",
+    "description": "Disconnect from screens for a full day to recharge mentally.",
+    "image": "/detox.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Stretch Routine",
+    "category": "Fitness",
+    "frequency": "7x/week",
+    "recommended": "Morning",
+    "description": "Start your day with a 10-minute full body stretch for flexibility.",
+    "image": "/stretch.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Meal Prep Sunday",
+    "category": "Nutrition",
+    "frequency": "1x/week",
+    "recommended": "Sunday",
+    "description": "Plan and prepare your meals for the week to stay on track with nutrition.",
+    "image": "/meal.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Cold Shower Challenge",
+    "category": "Discipline",
+    "frequency": "5x/week",
+    "recommended": "Morning",
+    "description": "Take a cold shower to boost alertness, mood, and resilience.",
+    "image": "/cold-shower.jpg"
+  }
+]
