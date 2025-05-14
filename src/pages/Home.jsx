@@ -2,7 +2,10 @@
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";
 import Progress from "../components/Progress";
+import { Suspense } from "react";
+import Loading from "../components/Loading";
 
+const featuredPromise = fetch("/data.json").then(res => res.json())
 
 const Home = () => {
   return (
@@ -10,7 +13,9 @@ const Home = () => {
       {/* Hero Section */}
       <Hero />
       {/* Featured Habits Section */}
-      <Featured />
+      <Suspense fallback={<Loading />}>
+        <Featured featuredPromise={featuredPromise} />
+      </Suspense>
       {/* Progress Highlights Section */}
       <Progress />
     </div>

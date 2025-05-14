@@ -1,4 +1,5 @@
 import { FiAlertTriangle, FiHome } from "react-icons/fi";
+import { Link } from "react-router";
 
 const ErrorPage = () => {
   return (
@@ -16,9 +17,9 @@ const ErrorPage = () => {
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <button href="/" className="btn btn-primary btn-lg">
+              <Link to="/" className="btn btn-primary btn-lg">
                 <FiHome className="mr-2" /> Back to Homepage
-              </button>
+              </Link>
             </div>
           </div>
 

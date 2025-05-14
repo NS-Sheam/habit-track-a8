@@ -24,7 +24,7 @@
     "frequency": "6x/week",
     "recommended": "Evening",
     "description": "Take a 30-minute walk every evening to unwind and stay active.",
-    "image": "evening-walk.jpg"
+    "image": "/evening-walk.jpg"
   },
   {
     "id": 4,

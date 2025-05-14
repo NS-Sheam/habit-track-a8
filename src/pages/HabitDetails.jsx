@@ -1,6 +1,38 @@
+import { useLoaderData, useParams } from "react-router";
+import { addToLocalStorage, getFromLocalStorage } from "../utils/localStorage";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 
 const HabitDetails = () => {
+  const { id } = useParams();
+  const data = useLoaderData();
+  const [isDone, setIsDone] = useState(false);
+
+
+  const habit = data?.find(item => item.id === parseInt(id))
+  const { title, description, category, image, recommended, frequency } = habit;
+
+  const handleDone = () => {
+    if (isDone) {
+      toast.error("Already added to db.");
+      return;
+    }
+    addToLocalStorage(habit.id);
+    setIsDone(true)
+    toast.success("Successfully added to db.");
+  }
+
+  useEffect(() => {
+    const storedData = getFromLocalStorage();
+
+    if (storedData.includes(habit.id)) {
+      setIsDone(true);
+    }
+
+  }, [habit])
+
+
 
   return (
     <div className="w-full px-4 py-12 bg-base-100">
@@ -23,14 +55,14 @@ const HabitDetails = () => {
                   <div className="flex items-start mb-6">
 
                     <img
-                      src="/morning-meditation.jpg"
-                      alt="Morning Meditation"
+                      src={image}
+                      alt={title}
                       className="w-32 h-32 object-cover rounded-lg mr-6"
                     />
 
                     <div>
-                      <h3 className="text-2xl font-bold mb-3">Morning Meditation</h3>
-                      <p className="text-gray-600 text-lg">Start your day with 10 minutes of mindfulness meditation to reduce stress and improve focus.</p>
+                      <h3 className="text-2xl font-bold mb-3">{title}</h3>
+                      <p className="text-gray-600 text-lg">{description}</p>
                     </div>
                   </div>
                 </div>
@@ -41,7 +73,7 @@ const HabitDetails = () => {
                       Category
                     </div>
                     <div className="badge badge-primary badge-lg px-4 py-3">
-                      Mindset
+                      {category}
                     </div>
                   </div>
 
@@ -49,7 +81,7 @@ const HabitDetails = () => {
                     <div className="font-semibold mb-2 text-gray-600">
                       Recommended Frequency
                     </div>
-                    <div className="text-lg font-medium">5x/week</div>
+                    <div className="text-lg font-medium">{frequency}</div>
                   </div>
                 </div>
 
@@ -58,7 +90,7 @@ const HabitDetails = () => {
                     Motivation Tips
                   </div>
                   <div className="text-gray-700 text-lg italic">
-                    Try to do this in the morning to make it a daily habit.`
+                    Try to do this in the morning to make it a {recommended} habit.`
                   </div>
                 </div>
               </div>
@@ -73,8 +105,10 @@ const HabitDetails = () => {
                       <span className="font-semibold text-lg">Done today:</span>
                     </div>
                     <div>
-                      <span className="text-lg font-bold text-error">
-                        No
+                      <span className={`text-lg font-bold ${isDone ? "text-success" : "text-error"}`}>
+                        {
+                          isDone ? "YES" : "NO"
+                        }
                       </span>
                     </div>
                   </div>
@@ -82,6 +116,7 @@ const HabitDetails = () => {
 
                 <button
                   className="btn btn-primary btn-lg w-full"
+                  onClick={handleDone}
                 >
                   Mark as Done
                 </button>

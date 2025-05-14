@@ -1,3 +1,4 @@
+import CountUp from "react-countup";
 
 
 const Progress = () => {
@@ -14,28 +15,28 @@ const Progress = () => {
                 <div className="bg-white p-6 rounded-lg shadow-md text-center">
                     <div className="text-4xl mb-3">🔥</div>
                     <div className="text-3xl font-bold text-primary mb-1">
-                        <div>12</div>
+                        <CountUp end={20} duration={5} />
                     </div>
                     <div className="text-gray-600">Habits Tracked</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md text-center">
                     <div className="text-4xl mb-3">📊</div>
                     <div className="text-3xl font-bold text-primary mb-1">
-                        <div>21</div>
+                        <CountUp end={25} duration={5} />
                     </div>
                     <div className="text-gray-600">Days Streak</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md text-center">
                     <div className="text-4xl mb-3">⏱️</div>
                     <div className="text-3xl font-bold text-primary mb-1">
-                        <div>52</div>
+                        <CountUp end={50} duration={5} />
                     </div>
                     <div className="text-gray-600">Hours Focused</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md text-center">
                     <div className="text-4xl mb-3">📝</div>
                     <div className="text-3xl font-bold text-primary mb-1">
-                        <div>55</div>
+                        <CountUp end={60} duration={5} />
                     </div>
                     <div className="text-gray-600">Total Entries</div>
                 </div>
