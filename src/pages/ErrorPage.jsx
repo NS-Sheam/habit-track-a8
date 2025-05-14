@@ -16,9 +16,9 @@ const ErrorPage = () => {
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <a href="/" className="btn btn-primary btn-lg">
+              <button href="/" className="btn btn-primary btn-lg">
                 <FiHome className="mr-2" /> Back to Homepage
-              </a>
+              </button>
             </div>
           </div>
 
