@@ -9,7 +9,7 @@ const Featured = () => {
                 <h2 className="text-3xl font-bold mb-4">Featured Habits</h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
                     Start with these proven habit templates to build consistency and
-                    improve your daily routine
+                    improve your daily routine.
                 </p>
             </div>
 
